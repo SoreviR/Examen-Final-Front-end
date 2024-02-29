@@ -1,8 +1,6 @@
 import Link from "next/link";
-import { useState } from "react/cjs/react.production.min";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const navbarLinks = [
     {
       text: "Ejercicio 1",
@@ -31,18 +29,6 @@ const Navbar = () => {
     {
       text: "Ejercicio 7",
       path: "/ejercicio-7",
-    },
-    {
-      text: "Ejercicio 8",
-      path: "/ejercicio-8",
-    },
-    {
-      text: "Ejercicio 9",
-      path: "/ejercicio-9",
-    },
-    {
-      text: "Ejercicio 10",
-      path: "/ejercicio-10",
     },
   ];
   return (
