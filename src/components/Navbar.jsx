@@ -1,51 +1,49 @@
 import Link from "next/link";
+import { CiGrid31 } from "react-icons/ci";
+import { IoPeople } from "react-icons/io5";
+import { GiDrill } from "react-icons/gi";
+import { TfiGallery } from "react-icons/tfi";
 
 const Navbar = () => {
   const navbarLinks = [
     {
-      text: "Ejercicio 1",
-      path: "/ejercicio-1",
+      icon: <CiGrid31 />,
+      text: "Card generator",
+      path: "/card-generator",
     },
     {
-      text: "Ejercicio 2",
-      path: "/ejercicio-2",
+      icon: <IoPeople />,
+      text: "Digital Clock",
+      path: "/digital-clock",
     },
     {
-      text: "Ejercicio 3",
-      path: "/ejercicio-3",
+      icon: <GiDrill />,
+      text: "Drilling Info",
+      path: "/drilling-info",
     },
     {
-      text: "Ejercicio 4",
-      path: "/ejercicio-4",
-    },
-    {
-      text: "Ejercicio 5",
-      path: "/ejercicio-5",
-    },
-    {
-      text: "Ejercicio 6",
-      path: "/ejercicio-6",
-    },
-    {
-      text: "Ejercicio 7",
-      path: "/ejercicio-7",
+      icon: <TfiGallery />,
+      text: "Galeria de Cartas",
+      path: "/galeria-cartas",
     },
   ];
   return (
-    <nav className="flex flex-col h-screen justify-around p-5 bg-slate-950 items-center fixed">
-      <Link href={"/"}>
-        <h1 className=" text-3xl text-white">Las Test</h1>
+    <nav className="flex flex-col h-screen gap-9 justify-center p-5 bg-slate-950 items-center fixed">
+      <Link href={"/card-generator"}>
+        <h1 className=" text-3xl text-white">Last Test</h1>
       </Link>
       <ul className="flex flex-col gap-6">
         {navbarLinks.map((link, i) => {
           return (
-            <Link
-              key={i}
-              href={link.path}
-              className="px-2 py-1 rounded-lg text-white hover:bg-[#1BFFFD] hover:text-black"
-            >
-              {link.text}
-            </Link>
+            <div key={i} className="flex items-center">
+              <p className="text-white">{link.icon}</p>
+              <Link
+                href={link.path}
+                className="px-2 py-1 rounded-lg text-white hover:bg-[#1BFFFD] hover:text-black"
+              >
+                {link.text}
+              </Link>
+            </div>
           );
         })}
       </ul>
