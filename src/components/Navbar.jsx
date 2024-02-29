@@ -29,7 +29,7 @@ const Navbar = () => {
   ];
   return (
     <nav className="flex flex-col h-screen gap-9 justify-center p-5 bg-slate-950 items-center fixed">
-      <Link href={"/"}>
+      <Link href={"/card-generator"}>
         <h1 className=" text-3xl text-white">Last Test</h1>
       </Link>
       <ul className="flex flex-col gap-6">

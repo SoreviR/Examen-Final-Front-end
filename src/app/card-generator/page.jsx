@@ -1,7 +1,10 @@
+import CardGenerator from "@/components/CardGenerator";
+
 const page = () => {
   return (
-    <div className="flex flex-col gap-5 justify-center">
-      <h2>Ejercicio 1</h2>
+    <div className="ml-72 pt-10 flex flex-col gap-5 justify-center">
+      <h2 className="text-2xl">Card Generator</h2>
+      <CardGenerator />
     </div>
   );
 };
