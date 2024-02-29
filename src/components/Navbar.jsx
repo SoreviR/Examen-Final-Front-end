@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { useState } from "react/cjs/react.production.min";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const navbarLinks = [
     {
       text: "Ejercicio 1",
@@ -44,17 +46,17 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="flex justify-around p-5 bg-slate-950 items-center">
+    <nav className="flex flex-col h-screen justify-around p-5 bg-slate-950 items-center fixed">
       <Link href={"/"}>
-        <h1 className="text-3xl text-white">Las Test</h1>
+        <h1 className=" text-3xl text-white">Las Test</h1>
       </Link>
-      <ul className="flex gap-6">
+      <ul className="flex flex-col gap-6">
         {navbarLinks.map((link, i) => {
           return (
             <Link
               key={i}
               href={link.path}
-              className="bg-[#3945a0] px-2 py-1 rounded-lg text-white hover:bg-[#1BFFFD] hover:text-black"
+              className="px-2 py-1 rounded-lg text-white hover:bg-[#1BFFFD] hover:text-black"
             >
               {link.text}
             </Link>
